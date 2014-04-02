@@ -1,0 +1,12 @@
+span {
+    width: 150px;
+    line-height: 2em;
+    display: block;
+}
+.table > tbody > tr > td {
+    padding: 0;
+}
+table {
+    margin-top: 50px;
+}
+

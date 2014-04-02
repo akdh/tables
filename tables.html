@@ -1,0 +1,41 @@
+<head>
+  <title>tables</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  {{> rows}}
+</body>
+
+<template name="rows">
+  {{ active_users }}
+  <table class="table table-bordered">
+    <tr>
+    <td></td>
+    {{#each header}}
+      <td>{{ col }}</td>
+    {{/each}}
+    </tr>
+    {{#each rows}}
+      <tr>
+      <td>{{ id }}</td>
+      {{> row}}
+      </tr>
+    {{/each}}
+  </table>
+</template>
+
+<template name="row">
+  {{#each cells}}
+    {{> cell}}
+  {{/each}}
+</template>
+
+<template name="cell">
+  <td style="{{css_style}}" id="{{id}}">
+    <span>
+    {{display}}
+    </span>
+  </td>
+</template>
